@@ -1,0 +1,28 @@
+{
+  "name": "chatbot-blip",
+  "version": "1.0.0",
+  "description": "chatbot blip",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiogomes/node-chatbot-blip.git"
+  },
+  "keywords": [
+    "chatbot",
+    "blip",
+    "node"
+  ],
+  "author": "sergiogomes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergiogomes/node-chatbot-blip/issues"
+  },
+  "homepage": "https://github.com/sergiogomes/node-chatbot-blip#readme",
+  "dependencies": {
+    "blip-sdk": "^10.0.0",
+    "lime-transport-websocket": "^2.0.3"
+  }
+}
