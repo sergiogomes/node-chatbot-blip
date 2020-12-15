@@ -15,5 +15,15 @@ client.connect()
   .then((session) => {
     // Connection success. Now is possible send and receive envelopes from server. */
     console.log('Application started. Press Ctrl + c to stop.')
+    const msg = {
+      type: 'text/plain',
+      content: 'Hello there!',
+      to: '4e96cd56-b2ea-49a6-b579-4449f8df24cd.bb83@0mn.io/default'
+    };
+    client.sendMessage(msg);
   })
   .catch((err) => { /* Connection failed. */ });
+
+client.addMessageReceiver(true, (message) => {
+  console.log(message);
+});
