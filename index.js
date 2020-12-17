@@ -14,7 +14,8 @@ const client = new BlipSdk.ClientBuilder()
 client.connect()
   .then((session) => {
     // Connection success. Now is possible send and receive envelopes from server. */
-    console.log('Application started. Press Ctrl + c to stop.')
+    console.log('Application started. Press Ctrl + c to stop.');
+    console.log(session);
     const msg = {
       type: 'text/plain',
       content: 'Hello there!',
@@ -22,7 +23,10 @@ client.connect()
     };
     client.sendMessage(msg);
   })
-  .catch((err) => { /* Connection failed. */ });
+  .catch((err) => {
+    /* Connection failed. */
+    console.error(err);
+  });
 
 client.addMessageReceiver(true, (message) => {
   console.log(message);
